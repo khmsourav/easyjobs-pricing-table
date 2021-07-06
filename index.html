@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./assets/css/style.min.css" />
+		<style>
+			.container {
+				margin: 100px auto;
+				max-width: 1260px;
+				width: 100%;
+				padding-left: 30px;
+				padding-right: 30px;
+				box-sizing: border-box;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="EjTabButtonWrapper">
+				<div class="EjTabButtonGroup">
+					<button
+						class="TabLinks active"
+						onclick="setTabActive(event, 'Monthly')"
+					>
+						Monthly
+					</button>
+					<button class="TabLinks" onclick="setTabActive(event, 'Yearly')">
+						Yearly
+					</button>
+					<button class="TabLinks" onclick="setTabActive(event, 'Lifetime')">
+						Lifetime
+					</button>
+				</div>
+			</div>
+			<div class="EjTabContentGroup">
+				<div class="EjTabContent active" id="Monthly">
+					<div class="EjPricingTable">
+						<div class="EjPricingTableCard EjPricingTableTitleCard">
+							<div class="EjTableTitleSectionHeader">
+								<img src="./assets/img/Ej logo.svg" alt="" />
+							</div>
+							<ul class="EjPricingCardData">
+								<li id="EjPricingTableLabel1"><span>Active Jobs</span></li>
+								<li id="EjPricingTableLabel2"><span>Team Account</span></li>
+								<li id="EjPricingTableLabel3"><span>On-Boarding Process</span></li>
+								<li id="EjPricingTableLabel4"><span>Visual Pipeline</span></li>
+								<li id="EjPricingTableLabel5"><span>Engaging Quiz</span></li>
+								<li id="EjPricingTableLabel6"><span>Remote Interview</span></li>
+								<li id="EjPricingTableLabel7"><span>easy.jobs AI</span></li>
+								<li id="EjPricingTableLabel8"><span>Smart Workflow</span></li>
+								<li id="EjPricingTableLabel9"><span>Detailed Analytics</span></li>
+								<li id="EjPricingTableLabel10"><span>24/7 Support</span></li>
+								<li id="EjPricingTableLabel11"><span>Custom Domain</span></li>
+							</ul>
+						</div>
+						<div class="EjPricingTableCardWrapper">
+							<div class="EjPricingTableCard">
+								<div class="EjTablePricingSectionHeader">
+									<h3 class="EjPricingTitle">Free</h3>
+									<div class="EjPriceValueWrapper">
+										<span class="EjPriceValue EjPresentPrice"
+											>$<span class="EjBig">0</span>/mo</span
+										>
+									</div>
+								</div>
+								<ul class="EjPricingCardData">
+									<li class="EjPricingTableLabel1"><span>1</span></li>
+									<li class="EjPricingTableLabel2"><span class="disabled">0</span></li>
+									<li class="EjPricingTableLabel3">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel4">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel5">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel6"><span class="EjCheckbox"></span></li>
+									<li class="EjPricingTableLabel7"><span class="EjCheckbox"></span></li>
+									<li class="EjPricingTableLabel8"><span class="EjCheckbox"></span></li>
+									<li class="EjPricingTableLabel9"><span class="EjCheckbox"></span></li>
+									<li class="EjPricingTableLabel10"><span class="EjCheckbox"></span></li>
+									<li class="EjPricingTableLabel11"><span class="EjCheckbox"></span></li>
+								</ul>
+								<div class="EjPricingCardFooter">
+									<a href="">See More</a>
+									<button class="EjButton">
+										<span class="EjText">GetStarted</span>
+									</button>
+								</div>
+							</div>
+							<div class="EjPricingTableCard">
+								<div class="EjTablePricingSectionHeader">
+									<h3 class="EjPricingTitle">Startup</h3>
+									<div class="EjPriceValueWrapper">
+										<span class="EjPriceValue EjPresentPrice"
+											>$<span class="EjBig">9</span>.99/mo</span
+										>
+										<span class="EjPriceValue EjPreviousPrice"
+											>$<span class="EjBig">19</span>.99/mo</span
+										>
+									</div>
+									<p class="EjPriceDescription">Saves 50% monthly</p>
+								</div>
+								<ul class="EjPricingCardData">
+									<li class="EjPricingTableLabel1"><span>5</span></li>
+									<li class="EjPricingTableLabel2"><span>3</span></li>
+									<li class="EjPricingTableLabel3">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel4">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel5">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel6">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel7">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel8">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel9">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel10">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel11"><span class="EjCheckbox"></span></li>
+								</ul>
+								<div class="EjPricingCardFooter">
+									<a href="">See More</a>
+									<button class="EjButton">
+										<span class="EjText">GetStarted</span>
+									</button>
+								</div>
+							</div>
+							<div class="EjPricingTableCard Active">
+								<div class="EjTablePricingSectionHeader">
+									<h3 class="EjPricingTitle">Business</h3>
+									<div class="EjPriceValueWrapper">
+										<span class="EjPriceValue EjPresentPrice"
+											>$<span class="EjBig">24</span>.99/mo</span
+										>
+										<span class="EjPriceValue EjPreviousPrice"
+											>$<span class="EjBig">49</span>.99/mo</span
+										>
+									</div>
+									<p class="EjPriceDescription">Saves 50% monthly</p>
+								</div>
+								<ul class="EjPricingCardData">
+									<li class="EjPricingTableLabel1"><span>25</span></li>
+									<li class="EjPricingTableLabel2"><span>10</span></li>
+									<li class="EjPricingTableLabel3">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel4">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel5">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel6">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel7">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel8">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel9">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel10">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel11">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+								</ul>
+								<div class="EjPricingCardFooter">
+									<a href="">See More</a>
+									<button class="EjButton">
+										<span class="EjText">GetStarted</span>
+									</button>
+								</div>
+							</div>
+							<div class="EjPricingTableCard">
+								<div class="EjTablePricingSectionHeader">
+									<h3 class="EjPricingTitle">Enterprise</h3>
+									<div class="EjPriceValueWrapper">
+										<span class="EjPriceValue EjPresentPrice"
+											>$<span class="EjBig">49</span>.99/mo</span
+										>
+										<span class="EjPriceValue EjPreviousPrice"
+											>$<span class="EjBig">99</span>.99/mo</span
+										>
+									</div>
+									<p class="EjPriceDescription">Saves 50% monthly</p>
+								</div>
+								<ul class="EjPricingCardData">
+									<li class="EjPricingTableLabel1"><span>Unlimited</span></li>
+									<li class="EjPricingTableLabel2"><span>100</span></li>
+									<li class="EjPricingTableLabel3">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel4">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel5">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel6">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel7">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel8">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel9">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel10">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel11">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+								</ul>
+								<div class="EjPricingCardFooter">
+									<a href="">See More</a>
+									<button class="EjButton">
+										<span class="EjText">GetStarted</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="EjTabContent" id="Yearly">
+					<div class="EjPricingTable">
+						<div class="EjPricingTableCard EjPricingTableTitleCard">
+							<div class="EjTableTitleSectionHeader">
+								<img src="./assets/img/Ej logo.svg" alt="" />
+							</div>
+							<ul class="EjPricingCardData">
+								<li id="EjPricingTableLabel1"><span>Active Jobs</span></li>
+								<li id="EjPricingTableLabel2"><span>Team Account</span></li>
+								<li id="EjPricingTableLabel3"><span>On-Boarding Process</span></li>
+								<li id="EjPricingTableLabel4"><span>Visual Pipeline</span></li>
+								<li id="EjPricingTableLabel5"><span>Engaging Quiz</span></li>
+								<li id="EjPricingTableLabel6"><span>Remote Interview</span></li>
+								<li id="EjPricingTableLabel7"><span>easy.jobs AI</span></li>
+								<li id="EjPricingTableLabel8"><span>Smart Workflow</span></li>
+								<li id="EjPricingTableLabel9"><span>Detailed Analytics</span></li>
+								<li id="EjPricingTableLabel10"><span>24/7 Support</span></li>
+								<li id="EjPricingTableLabel11"><span>Custom Domain</span></li>
+							</ul>
+						</div>
+						<div class="EjPricingTableCardWrapper">
+							<div class="EjPricingTableCard">
+								<div class="EjTablePricingSectionHeader">
+									<h3 class="EjPricingTitle">Free</h3>
+									<div class="EjPriceValueWrapper">
+										<span class="EjPriceValue EjPresentPrice"
+											>$<span class="EjBig">0</span>/mo</span
+										>
+									</div>
+								</div>
+								<ul class="EjPricingCardData">
+									<li class="EjPricingTableLabel1"><span>1</span></li>
+									<li class="EjPricingTableLabel2"><span class="disabled">0</span></li>
+									<li class="EjPricingTableLabel3">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel4">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel5">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel6"><span class="EjCheckbox"></span></li>
+									<li class="EjPricingTableLabel7"><span class="EjCheckbox"></span></li>
+									<li class="EjPricingTableLabel8"><span class="EjCheckbox"></span></li>
+									<li class="EjPricingTableLabel9"><span class="EjCheckbox"></span></li>
+									<li class="EjPricingTableLabel10"><span class="EjCheckbox"></span></li>
+									<li class="EjPricingTableLabel11"><span class="EjCheckbox"></span></li>
+								</ul>
+								<div class="EjPricingCardFooter">
+									<a href="">See More</a>
+									<button class="EjButton">
+										<span class="EjText">GetStarted</span>
+									</button>
+								</div>
+							</div>
+							<div class="EjPricingTableCard">
+								<div class="EjTablePricingSectionHeader">
+									<h3 class="EjPricingTitle">Startup</h3>
+									<div class="EjPriceValueWrapper">
+										<span class="EjPriceValue EjPresentPrice"
+											>$<span class="EjBig">9</span>.99/mo</span
+										>
+										<span class="EjPriceValue EjPreviousPrice"
+											>$<span class="EjBig">19</span>.99/mo</span
+										>
+									</div>
+									<p class="EjPriceDescription">Saves 50% monthly</p>
+								</div>
+								<ul class="EjPricingCardData">
+									<li class="EjPricingTableLabel1"><span>5</span></li>
+									<li class="EjPricingTableLabel2"><span>3</span></li>
+									<li class="EjPricingTableLabel3">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel4">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel5">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel6">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel7">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel8">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel9">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel10">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel11"><span class="EjCheckbox"></span></li>
+								</ul>
+								<div class="EjPricingCardFooter">
+									<a href="">See More</a>
+									<button class="EjButton">
+										<span class="EjText">GetStarted</span>
+									</button>
+								</div>
+							</div>
+							<div class="EjPricingTableCard Active">
+								<div class="EjTablePricingSectionHeader">
+									<h3 class="EjPricingTitle">Business</h3>
+									<div class="EjPriceValueWrapper">
+										<span class="EjPriceValue EjPresentPrice"
+											>$<span class="EjBig">24</span>.99/mo</span
+										>
+										<span class="EjPriceValue EjPreviousPrice"
+											>$<span class="EjBig">49</span>.99/mo</span
+										>
+									</div>
+									<p class="EjPriceDescription">Saves 50% monthly</p>
+								</div>
+								<ul class="EjPricingCardData">
+									<li class="EjPricingTableLabel1"><span>25</span></li>
+									<li class="EjPricingTableLabel2"><span>10</span></li>
+									<li class="EjPricingTableLabel3">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel4">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel5">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel6">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel7">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel8">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel9">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel10">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel11">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+								</ul>
+								<div class="EjPricingCardFooter">
+									<a href="">See More</a>
+									<button class="EjButton">
+										<span class="EjText">GetStarted</span>
+									</button>
+								</div>
+							</div>
+							<div class="EjPricingTableCard">
+								<div class="EjTablePricingSectionHeader">
+									<h3 class="EjPricingTitle">Enterprise</h3>
+									<div class="EjPriceValueWrapper">
+										<span class="EjPriceValue EjPresentPrice"
+											>$<span class="EjBig">49</span>.99/mo</span
+										>
+										<span class="EjPriceValue EjPreviousPrice"
+											>$<span class="EjBig">99</span>.99/mo</span
+										>
+									</div>
+									<p class="EjPriceDescription">Saves 50% monthly</p>
+								</div>
+								<ul class="EjPricingCardData">
+									<li class="EjPricingTableLabel1"><span>Unlimited</span></li>
+									<li class="EjPricingTableLabel2"><span>100</span></li>
+									<li class="EjPricingTableLabel3">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel4">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel5">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel6">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel7">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel8">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel9">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel10">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel11">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+								</ul>
+								<div class="EjPricingCardFooter">
+									<a href="">See More</a>
+									<button class="EjButton">
+										<span class="EjText">GetStarted</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="EjTabContent" id="Lifetime">
+					<div class="EjPricingTable">
+						<div class="EjPricingTableCard EjPricingTableTitleCard">
+							<div class="EjTableTitleSectionHeader">
+								<img src="./assets/img/Ej logo.svg" alt="" />
+							</div>
+							<ul class="EjPricingCardData">
+								<li id="EjPricingTableLabel1"><span>Active Jobs</span></li>
+								<li id="EjPricingTableLabel2"><span>Team Account</span></li>
+								<li id="EjPricingTableLabel3"><span>On-Boarding Process</span></li>
+								<li id="EjPricingTableLabel4"><span>Visual Pipeline</span></li>
+								<li id="EjPricingTableLabel5"><span>Engaging Quiz</span></li>
+								<li id="EjPricingTableLabel6"><span>Remote Interview</span></li>
+								<li id="EjPricingTableLabel7"><span>easy.jobs AI</span></li>
+								<li id="EjPricingTableLabel8"><span>Smart Workflow</span></li>
+								<li id="EjPricingTableLabel9"><span>Detailed Analytics</span></li>
+								<li id="EjPricingTableLabel10"><span>24/7 Support</span></li>
+								<li id="EjPricingTableLabel11"><span>Custom Domain</span></li>
+							</ul>
+						</div>
+						<div class="EjPricingTableCardWrapper">
+							<div class="EjPricingTableCard">
+								<div class="EjTablePricingSectionHeader">
+									<h3 class="EjPricingTitle">Free</h3>
+									<div class="EjPriceValueWrapper">
+										<span class="EjPriceValue EjPresentPrice"
+											>$<span class="EjBig">0</span>/mo</span
+										>
+									</div>
+								</div>
+								<ul class="EjPricingCardData">
+									<li class="EjPricingTableLabel1"><span>1</span></li>
+									<li class="EjPricingTableLabel2"><span class="disabled">0</span></li>
+									<li class="EjPricingTableLabel3">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel4">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel5">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel6"><span class="EjCheckbox"></span></li>
+									<li class="EjPricingTableLabel7"><span class="EjCheckbox"></span></li>
+									<li class="EjPricingTableLabel8"><span class="EjCheckbox"></span></li>
+									<li class="EjPricingTableLabel9"><span class="EjCheckbox"></span></li>
+									<li class="EjPricingTableLabel10"><span class="EjCheckbox"></span></li>
+									<li class="EjPricingTableLabel11"><span class="EjCheckbox"></span></li>
+								</ul>
+								<div class="EjPricingCardFooter">
+									<a href="">See More</a>
+									<button class="EjButton">
+										<span class="EjText">GetStarted</span>
+									</button>
+								</div>
+							</div>
+							<div class="EjPricingTableCard">
+								<div class="EjTablePricingSectionHeader">
+									<h3 class="EjPricingTitle">Startup</h3>
+									<div class="EjPriceValueWrapper">
+										<span class="EjPriceValue EjPresentPrice"
+											>$<span class="EjBig">9</span>.99/mo</span
+										>
+										<span class="EjPriceValue EjPreviousPrice"
+											>$<span class="EjBig">19</span>.99/mo</span
+										>
+									</div>
+									<p class="EjPriceDescription">Saves 50% monthly</p>
+								</div>
+								<ul class="EjPricingCardData">
+									<li class="EjPricingTableLabel1"><span>5</span></li>
+									<li class="EjPricingTableLabel2"><span>3</span></li>
+									<li class="EjPricingTableLabel3">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel4">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel5">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel6">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel7">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel8">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel9">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel10">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel11"><span class="EjCheckbox"></span></li>
+								</ul>
+								<div class="EjPricingCardFooter">
+									<a href="">See More</a>
+									<button class="EjButton">
+										<span class="EjText">GetStarted</span>
+									</button>
+								</div>
+							</div>
+							<div class="EjPricingTableCard Active">
+								<div class="EjTablePricingSectionHeader">
+									<h3 class="EjPricingTitle">Business</h3>
+									<div class="EjPriceValueWrapper">
+										<span class="EjPriceValue EjPresentPrice"
+											>$<span class="EjBig">24</span>.99/mo</span
+										>
+										<span class="EjPriceValue EjPreviousPrice"
+											>$<span class="EjBig">49</span>.99/mo</span
+										>
+									</div>
+									<p class="EjPriceDescription">Saves 50% monthly</p>
+								</div>
+								<ul class="EjPricingCardData">
+									<li class="EjPricingTableLabel1"><span>25</span></li>
+									<li class="EjPricingTableLabel2"><span>10</span></li>
+									<li class="EjPricingTableLabel3">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel4">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel5">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel6">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel7">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel8">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel9">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel10">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel11">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+								</ul>
+								<div class="EjPricingCardFooter">
+									<a href="">See More</a>
+									<button class="EjButton">
+										<span class="EjText">GetStarted</span>
+									</button>
+								</div>
+							</div>
+							<div class="EjPricingTableCard">
+								<div class="EjTablePricingSectionHeader">
+									<h3 class="EjPricingTitle">Enterprise</h3>
+									<div class="EjPriceValueWrapper">
+										<span class="EjPriceValue EjPresentPrice"
+											>$<span class="EjBig">49</span>.99/mo</span
+										>
+										<span class="EjPriceValue EjPreviousPrice"
+											>$<span class="EjBig">99</span>.99/mo</span
+										>
+									</div>
+									<p class="EjPriceDescription">Saves 50% monthly</p>
+								</div>
+								<ul class="EjPricingCardData">
+									<li class="EjPricingTableLabel1"><span>Unlimited</span></li>
+									<li class="EjPricingTableLabel2"><span>100</span></li>
+									<li class="EjPricingTableLabel3">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel4">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel5">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel6">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel7">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel8">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel9">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel10">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel11">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+								</ul>
+								<div class="EjPricingCardFooter">
+									<a href="">See More</a>
+									<button class="EjButton">
+										<span class="EjText">GetStarted</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			function setTabActive(evt, tabItem) {
+				var i, tabContent, tabLinks;
+				tabContent = document.getElementsByClassName('EjTabContent');
+				tabLinks = document.getElementsByClassName('TabLinks');
+				for (i = 0; i < tabLinks.length; i++) {
+					tabLinks[i].className = tabLinks[i].className.replace(' active', '');
+					tabContent[i].className = tabContent[i].className.replace(' active', '');
+				}
+				document.getElementById(tabItem).className += ' active';
+				evt.currentTarget.className += ' active';
+			}
+		</script>
+		<script>
+			var selectorLabel = document.querySelectorAll("[id*='EjPricingTableLabel'");
+			selectorLabel.forEach((element) => {
+				var placeableLabel = document.getElementsByClassName(element.id);
+				Object.values(placeableLabel).forEach((innerElement) => {
+					innerElement.setAttribute('before-content', element.innerText);
+				});
+			});
+		</script>
+	</body>
+</html>
