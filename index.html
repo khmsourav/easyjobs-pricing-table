@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -16,15 +17,648 @@
 				box-sizing: border-box;
 			}
 		</style>
+
+		<style>
+			@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+			@-webkit-keyframes FadeIn {
+				0% {
+					opacity: 0
+				}
+
+				100% {
+					opacity: 1
+				}
+			}
+
+			@keyframes FadeIn {
+				0% {
+					opacity: 0
+				}
+
+				100% {
+					opacity: 1
+				}
+			}
+
+			.EjTabButtonWrapper {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				justify-content: center
+			}
+
+			.EjTabButtonWrapper:not(:last-child) {
+				margin-bottom: 30px
+			}
+
+			.EjTabButtonGroup {
+				display: -webkit-inline-box;
+				display: -ms-inline-flexbox;
+				display: inline-flex;
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				justify-content: center;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+				background: rgba(89, 125, 252, 0.1);
+				border-radius: 5px
+			}
+
+			.EjTabButtonGroup .TabLinks {
+				min-height: 50px;
+				padding: 5px 25px;
+				border: none;
+				outline: none;
+				-webkit-box-shadow: none;
+				box-shadow: none;
+				border-radius: 5px;
+				background: transparent;
+				color: #597dfc;
+				font-size: 16px;
+				font-weight: 500;
+				-webkit-transition: none;
+				transition: none;
+				cursor: pointer
+			}
+
+			.EjTabButtonGroup .TabLinks.active {
+				background: #597dfc;
+				color: #fff
+			}
+
+			.EjTabButtonGroup .TabLinks:not(:last-child):not(.active) {
+				position: relative
+			}
+
+			.EjTabButtonGroup .TabLinks:not(:last-child):not(.active):after {
+				content: '';
+				position: absolute;
+				top: 17px;
+				bottom: 17px;
+				right: -2px;
+				width: 2px;
+				background: #597dfc
+			}
+
+			.EjTabContent {
+				-webkit-animation-name: FadeIn;
+				animation-name: FadeIn;
+				-webkit-animation-duration: 0.15s;
+				animation-duration: 0.15s;
+				-webkit-animation-timing-function: linear;
+				animation-timing-function: linear;
+				display: none
+			}
+
+			.EjTabContent.active {
+				display: block
+			}
+
+			.EjPricingTable {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				font-family: 'Poppins', sans-serif
+			}
+
+			.EjPricingTable * {
+				-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+				border: none;
+				outline: none
+			}
+
+			@media screen and (min-width: 992px) {
+				.EjPricingTable {
+					padding: 10px;
+					padding-top: 0;
+					border-radius: 10px;
+					background: #597dfc
+				}
+			}
+
+			.EjPricingTable .EjPricingTableCard {
+				display: -ms-grid;
+				display: grid;
+				-ms-grid-rows: 150px 1fr 150px;
+				grid-template-rows: 150px 1fr 150px
+			}
+
+			.EjPricingTable .EjTableTitleSectionHeader {
+				padding: 20px;
+				padding-top: 30px;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				justify-content: center;
+				background: #597dfc;
+				color: #fff;
+				min-height: 150px
+			}
+
+			.EjPricingTable .EjTableTitleSectionHeader img,
+			.EjPricingTable .EjTableTitleSectionHeader svg {
+				max-width: 170px;
+				width: 100%
+			}
+
+			.EjPricingTable .EjTablePricingSectionHeader {
+				padding: 20px 10px;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-orient: vertical;
+				-webkit-box-direction: normal;
+				-ms-flex-direction: column;
+				flex-direction: column;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+				background: #597dfc;
+				color: #fff;
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				justify-content: center
+			}
+
+			.EjPricingTable .EjPricingTitle {
+				color: #fff;
+				font-size: 20px;
+				font-weight: 500;
+				margin-top: 0;
+				text-transform: uppercase;
+				text-align: center;
+				line-height: 1
+			}
+
+			.EjPricingTable .EjPricingTitle:not(:last-child) {
+				margin-bottom: 10px
+			}
+
+			.EjPricingTable .EjPriceValueWrapper {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				text-align: center;
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				justify-content: center;
+				width: 100%;
+				margin-left: -4px;
+				margin-right: -4px;
+				-ms-flex-wrap: wrap;
+				flex-wrap: wrap;
+				margin-bottom: 10px
+			}
+
+			.EjPricingTable .EjPriceValueWrapper .EjPriceValue {
+				color: #fff;
+				font-size: 14px;
+				font-weight: 500;
+				padding-left: 4px;
+				padding-right: 4px;
+				line-height: 1.1;
+				letter-spacing: 0.1px
+			}
+
+			.EjPricingTable .EjPriceValueWrapper .EjPriceValue .EjBig {
+				font-size: 22px;
+				margin-left: 1px
+			}
+
+			.EjPricingTable .EjPriceValueWrapper .EjPriceValue.EjPreviousPrice {
+				position: relative;
+				color: rgba(255, 255, 255, 0.5)
+			}
+
+			.EjPricingTable .EjPriceValueWrapper .EjPriceValue.EjPreviousPrice:after {
+				content: '';
+				position: absolute;
+				top: 54%;
+				left: 0;
+				right: 0;
+				height: 1px;
+				background: rgba(255, 255, 255, 0.5)
+			}
+
+			.EjPricingTable .EjPriceDescription {
+				color: #fff;
+				text-align: center;
+				font-size: 14px;
+				margin-bottom: 0
+			}
+
+			.EjPricingTable .EjPriceDescription .EjBadge {
+				display: -webkit-inline-box;
+				display: -ms-inline-flexbox;
+				display: inline-flex;
+				background: #fff;
+				padding: 5px 7px;
+				border-radius: 20px;
+				color: #597dfc;
+				margin-right: 5px;
+				font-size: 11px;
+				line-height: 1;
+				font-weight: 500;
+				letter-spacing: -0.5px
+			}
+
+			.EjPricingTable .EjPricingCardData {
+				background: #fff;
+				color: #5f7597;
+				list-style: none;
+				padding-left: 0;
+				padding-top: 15px;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-orient: vertical;
+				-webkit-box-direction: normal;
+				-ms-flex-direction: column;
+				flex-direction: column;
+				margin: 0
+			}
+
+			@media screen and (max-width: 991.98px) {
+				.EjPricingTable .EjPricingCardData {
+					padding: 0 20px
+				}
+			}
+
+			.EjPricingTable .EjPricingCardData li {
+				-webkit-box-flex: 1;
+				-ms-flex: 1;
+				flex: 1;
+				min-height: 60px;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+				padding: 0 20px;
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				justify-content: center;
+				font-size: 16px;
+				line-height: 1;
+				color: #5f7597
+			}
+
+			.EjPricingTable .EjPricingCardData li:before {
+				content: attr(before-content);
+				font-size: 14px;
+				color: #1c2238;
+				margin-right: auto
+			}
+
+			@media screen and (min-width: 992px) {
+				.EjPricingTable .EjPricingCardData li:before {
+					display: none
+				}
+			}
+
+			@media screen and (max-width: 991.98px) {
+				.EjPricingTable .EjPricingCardData li {
+					border-bottom: 1px solid #e5ebfd
+				}
+			}
+
+			.EjPricingTable .EjPricingCardData li .disabled {
+				color: #9eacc1
+			}
+
+			.EjPricingTable .EjPricingCardFooter {
+				padding-bottom: 5px;
+				background: #fff;
+				color: #5f7597;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-orient: vertical;
+				-webkit-box-direction: normal;
+				-ms-flex-direction: column;
+				flex-direction: column;
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				justify-content: center;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center
+			}
+
+			.EjPricingTable .EjPricingCardFooter a:not(.EjButton) {
+				font-size: 16px;
+				color: #1c2238;
+				text-decoration: underline;
+				cursor: pointer;
+				line-height: 1;
+				-webkit-transition: color 0.2s ease-in-out;
+				transition: color 0.2s ease-in-out
+			}
+
+			.EjPricingTable .EjPricingCardFooter a:not(.EjButton):hover {
+				color: #597dfc
+			}
+
+			.EjPricingTable .EjPricingCardFooter a:not(.EjButton):not(:last-child) {
+				margin-bottom: 30px
+			}
+
+			@media screen and (max-width: 991.98px) {
+				.EjPricingTable .EjPricingCardFooter a:not(.EjButton):not(:last-child) {
+					margin-bottom: 20px
+				}
+			}
+
+			.EjPricingTable .EjButton {
+				display: -webkit-inline-box;
+				display: -ms-inline-flexbox;
+				display: inline-flex;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				justify-content: center;
+				width: initial;
+				padding: 2px 30px;
+				border: 2px solid #597dfc;
+				border-radius: 50px;
+				min-height: 50px;
+				cursor: pointer;
+				outline: none;
+				background: #597dfc;
+				text-decoration: none;
+				color: #fff;
+				-webkit-box-shadow: 0 10px 20px rgba(89, 125, 252, 0.3);
+				box-shadow: 0 10px 20px rgba(89, 125, 252, 0.3);
+				-webkit-transition: all 0.3s ease-in-out;
+				transition: all 0.3s ease-in-out;
+				-webkit-transition-property: color, background, border-color, -webkit-box-shadow;
+				transition-property: color, background, border-color, -webkit-box-shadow;
+				transition-property: color, background, border-color, box-shadow;
+				transition-property: color, background, border-color, box-shadow, -webkit-box-shadow
+			}
+
+			.EjPricingTable .EjButton .EjText {
+				font-size: 16px;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center
+			}
+
+			.EjPricingTable .EjButton:hover {
+				border-color: #597dfc;
+				background-color: transparent;
+				color: #1c2238;
+				-webkit-box-shadow: none;
+				box-shadow: none
+			}
+
+			.EjPricingTable .EjCheckbox {
+				background: #ff5e5e;
+				height: 16px;
+				width: 16px;
+				border-radius: 16px;
+				position: relative
+			}
+
+			.EjPricingTable .EjCheckbox:before {
+				content: '';
+				position: absolute;
+				height: 2px;
+				width: 10px;
+				left: 3px;
+				top: 7px;
+				background: #fff;
+				-webkit-transform: rotate(-45deg);
+				transform: rotate(-45deg);
+				-webkit-transform-origin: center center;
+				transform-origin: center center;
+				border-radius: 2px
+			}
+
+			.EjPricingTable .EjCheckbox:after {
+				content: '';
+				position: absolute;
+				height: 2px;
+				width: 10px;
+				left: 3px;
+				top: 7px;
+				background: #fff;
+				-webkit-transform: rotate(45deg);
+				transform: rotate(45deg);
+				border-radius: 2px
+			}
+
+			.EjPricingTable .EjCheckbox.Checked {
+				background: #5fce83
+			}
+
+			.EjPricingTable .EjCheckbox.Checked:before {
+				content: '';
+				position: absolute;
+				height: 2px;
+				width: 8px;
+				left: 5px;
+				top: 7px;
+				background: #fff;
+				-webkit-transform: rotate(-45deg);
+				transform: rotate(-45deg);
+				-webkit-transform-origin: center center;
+				transform-origin: center center;
+				border-radius: 2px
+			}
+
+			.EjPricingTable .EjCheckbox.Checked:after {
+				content: '';
+				position: absolute;
+				height: 2px;
+				width: 5px;
+				left: 3px;
+				top: 8px;
+				background: #fff;
+				-webkit-transform: rotate(45deg);
+				transform: rotate(45deg);
+				border-radius: 2px
+			}
+
+			.EjPricingTable .EjPricingTableTitleCard {
+				-webkit-box-flex: 0;
+				-ms-flex: 0 0 23%;
+				flex: 0 0 23%
+			}
+
+			@media screen and (max-width: 991.98px) {
+				.EjPricingTable .EjPricingTableTitleCard {
+					display: none
+				}
+			}
+
+			.EjPricingTable .EjPricingTableTitleCard .EjPricingCardData {
+				background: #597dfc;
+				color: #fff;
+				margin-left: 20px
+			}
+
+			@media screen and (max-width: 1200px) {
+				.EjPricingTable .EjPricingTableTitleCard .EjPricingCardData {
+					margin-left: 10px
+				}
+			}
+
+			.EjPricingTable .EjPricingTableTitleCard .EjPricingCardData li {
+				-webkit-box-pack: start;
+				-ms-flex-pack: start;
+				justify-content: flex-start;
+				text-align: left;
+				font-size: 18px;
+				color: #fff
+			}
+
+			@media screen and (max-width: 1200px) {
+				.EjPricingTable .EjPricingTableTitleCard .EjPricingCardData li {
+					font-size: 16px
+				}
+			}
+
+			.EjPricingTable .EjPricingTableCardWrapper {
+				-webkit-box-flex: 1;
+				-ms-flex: 1;
+				flex: 1;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex
+			}
+
+			@media screen and (max-width: 991.98px) {
+				.EjPricingTable .EjPricingTableCardWrapper {
+					display: -ms-grid;
+					display: grid;
+					grid-gap: 30px;
+					-ms-grid-columns: (1fr)[2];
+					grid-template-columns: repeat(2, 1fr)
+				}
+			}
+
+			@media screen and (max-width: 767.98px) {
+				.EjPricingTable .EjPricingTableCardWrapper {
+					-ms-grid-columns: (1fr)[1];
+					grid-template-columns: repeat(1, 1fr)
+				}
+			}
+
+			.EjPricingTable .EjPricingTableCardWrapper .EjPricingTableCard {
+				-webkit-box-flex: 0;
+				-ms-flex: 0 0 25%;
+				flex: 0 0 25%;
+				max-width: 25%
+			}
+
+			@media screen and (min-width: 992px) {
+				.EjPricingTable .EjPricingTableCardWrapper .EjPricingTableCard:first-child .EjPricingCardData {
+					border-top-left-radius: 10px
+				}
+
+				.EjPricingTable .EjPricingTableCardWrapper .EjPricingTableCard:first-child .EjPricingCardFooter {
+					border-bottom-left-radius: 10px
+				}
+
+				.EjPricingTable .EjPricingTableCardWrapper .EjPricingTableCard:last-child .EjPricingCardData {
+					border-top-right-radius: 10px
+				}
+
+				.EjPricingTable .EjPricingTableCardWrapper .EjPricingTableCard:last-child .EjPricingCardFooter {
+					border-bottom-right-radius: 10px
+				}
+
+				.EjPricingTable .EjPricingTableCardWrapper .EjPricingTableCard:not(:last-child) {
+					border-right: 1px solid #eaeffd
+				}
+			}
+
+			@media screen and (max-width: 991.98px) {
+				.EjPricingTable .EjPricingTableCardWrapper .EjPricingTableCard {
+					-webkit-box-flex: 0;
+					-ms-flex: 0 0 100%;
+					flex: 0 0 100%;
+					max-width: 100%;
+					-webkit-box-shadow: 0 10px 20px #e5ebfd;
+					box-shadow: 0 10px 20px #e5ebfd
+				}
+			}
+
+			.EjPricingTable .EjPricingTableCardWrapper .EjPricingTableCard.Active .EjPricingCardFooter,
+			.EjPricingTable .EjPricingTableCardWrapper .EjPricingTableCard.Active .EjPricingCardData {
+				background: #eef2fe
+			}
+
+			.EjPricingTable .EjPricingTableCardWrapper .EjPricingTableCard.Active .EjButton {
+				display: -webkit-inline-box;
+				display: -ms-inline-flexbox;
+				display: inline-flex;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				justify-content: center;
+				width: initial;
+				padding: 2px 30px;
+				border: 2px solid #597dfc;
+				color: #1c2238;
+				border-radius: 50px;
+				min-height: 50px;
+				background: transparent;
+				cursor: pointer;
+				outline: none;
+				-webkit-box-shadow: none;
+				box-shadow: none
+			}
+
+			.EjPricingTable .EjPricingTableCardWrapper .EjPricingTableCard.Active .EjButton .EjText {
+				font-size: 16px;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center
+			}
+
+			.EjPricingTable .EjPricingTableCardWrapper .EjPricingTableCard.Active .EjButton:hover {
+				border-color: #597dfc;
+				background-color: #597dfc;
+				color: #fff;
+				-webkit-box-shadow: 0 10px 20px rgba(89, 125, 252, 0.3);
+				box-shadow: 0 10px 20px rgba(89, 125, 252, 0.3)
+			}
+		</style>
 	</head>
+
 	<body>
 		<div class="container">
 			<div class="EjTabButtonWrapper">
 				<div class="EjTabButtonGroup">
-					<button
-						class="TabLinks active"
-						onclick="setTabActive(event, 'Monthly')"
-					>
+					<button class="TabLinks active" onclick="setTabActive(event, 'Monthly')">
 						Monthly
 					</button>
 					<button class="TabLinks" onclick="setTabActive(event, 'Yearly')">
@@ -61,9 +695,8 @@
 								<div class="EjTablePricingSectionHeader">
 									<h3 class="EjPricingTitle">Free</h3>
 									<div class="EjPriceValueWrapper">
-										<span class="EjPriceValue EjPresentPrice"
-											>$<span class="EjBig">0</span>/mo</span
-										>
+										<span class="EjPriceValue EjPresentPrice">$<span
+												class="EjBig">0</span>/mo</span>
 									</div>
 								</div>
 								<ul class="EjPricingCardData">
@@ -96,12 +729,10 @@
 								<div class="EjTablePricingSectionHeader">
 									<h3 class="EjPricingTitle">Startup</h3>
 									<div class="EjPriceValueWrapper">
-										<span class="EjPriceValue EjPresentPrice"
-											>$<span class="EjBig">9</span>.99/mo</span
-										>
-										<span class="EjPriceValue EjPreviousPrice"
-											>$<span class="EjBig">19</span>.99/mo</span
-										>
+										<span class="EjPriceValue EjPresentPrice">$<span
+												class="EjBig">9</span>.99/mo</span>
+										<span class="EjPriceValue EjPreviousPrice">$<span
+												class="EjBig">19</span>.99/mo</span>
 									</div>
 									<p class="EjPriceDescription">Saves 50% monthly</p>
 								</div>
@@ -145,12 +776,10 @@
 								<div class="EjTablePricingSectionHeader">
 									<h3 class="EjPricingTitle">Business</h3>
 									<div class="EjPriceValueWrapper">
-										<span class="EjPriceValue EjPresentPrice"
-											>$<span class="EjBig">24</span>.99/mo</span
-										>
-										<span class="EjPriceValue EjPreviousPrice"
-											>$<span class="EjBig">49</span>.99/mo</span
-										>
+										<span class="EjPriceValue EjPresentPrice">$<span
+												class="EjBig">24</span>.99/mo</span>
+										<span class="EjPriceValue EjPreviousPrice">$<span
+												class="EjBig">49</span>.99/mo</span>
 									</div>
 									<p class="EjPriceDescription">Saves 50% monthly</p>
 								</div>
@@ -196,12 +825,10 @@
 								<div class="EjTablePricingSectionHeader">
 									<h3 class="EjPricingTitle">Enterprise</h3>
 									<div class="EjPriceValueWrapper">
-										<span class="EjPriceValue EjPresentPrice"
-											>$<span class="EjBig">49</span>.99/mo</span
-										>
-										<span class="EjPriceValue EjPreviousPrice"
-											>$<span class="EjBig">99</span>.99/mo</span
-										>
+										<span class="EjPriceValue EjPresentPrice">$<span
+												class="EjBig">49</span>.99/mo</span>
+										<span class="EjPriceValue EjPreviousPrice">$<span
+												class="EjBig">99</span>.99/mo</span>
 									</div>
 									<p class="EjPriceDescription">Saves 50% monthly</p>
 								</div>
@@ -271,9 +898,8 @@
 								<div class="EjTablePricingSectionHeader">
 									<h3 class="EjPricingTitle">Free</h3>
 									<div class="EjPriceValueWrapper">
-										<span class="EjPriceValue EjPresentPrice"
-											>$<span class="EjBig">0</span>/mo</span
-										>
+										<span class="EjPriceValue EjPresentPrice">$<span
+												class="EjBig">0</span>/mo</span>
 									</div>
 								</div>
 								<ul class="EjPricingCardData">
@@ -299,21 +925,21 @@
 									<a href="#">See More</a>
 									<a href="https://app.easy.jobs/subscribe?plan=free" class="EjButton">
 										<span class="EjText">Get Started</span>
-                  </a>
+									</a>
 								</div>
 							</div>
 							<div class="EjPricingTableCard">
 								<div class="EjTablePricingSectionHeader">
 									<h3 class="EjPricingTitle">Startup</h3>
 									<div class="EjPriceValueWrapper">
-										<span class="EjPriceValue EjPresentPrice"
-											>$<span class="EjBig">5</span>.99/mo</span
-										>
-										<span class="EjPriceValue EjPreviousPrice"
-											>$<span class="EjBig">19</span>.99/mo</span
-										>
+										<span class="EjPriceValue EjPresentPrice">$<span
+												class="EjBig">5</span>.99/mo</span>
+										<span class="EjPriceValue EjPreviousPrice">$<span
+												class="EjBig">19</span>.99/mo</span>
 									</div>
-									<p class="EjPriceDescription"><span>Billed Annually $71.88</span> <br /> <span>(Saves 64%)</span></p>
+									<p class="EjPriceDescription"><span>Billed Annually $71.88</span> <br />
+										<span>(Saves 64%)</span>
+									</p>
 								</div>
 								<ul class="EjPricingCardData">
 									<li class="EjPricingTableLabel1"><span>5</span></li>
@@ -355,14 +981,14 @@
 								<div class="EjTablePricingSectionHeader">
 									<h3 class="EjPricingTitle">Business</h3>
 									<div class="EjPriceValueWrapper">
-										<span class="EjPriceValue EjPresentPrice"
-											>$<span class="EjBig">19</span>.99/mo</span
-										>
-										<span class="EjPriceValue EjPreviousPrice"
-											>$<span class="EjBig">49</span>.99/mo</span
-										>
+										<span class="EjPriceValue EjPresentPrice">$<span
+												class="EjBig">19</span>.99/mo</span>
+										<span class="EjPriceValue EjPreviousPrice">$<span
+												class="EjBig">49</span>.99/mo</span>
 									</div>
-									<p class="EjPriceDescription"><span>Billed Annually $239.85</span> <br /> <span>(Saves 52%)</span></p>
+									<p class="EjPriceDescription"><span>Billed Annually $239.85</span> <br />
+										<span>(Saves 52%)</span>
+									</p>
 								</div>
 								<ul class="EjPricingCardData">
 									<li class="EjPricingTableLabel1"><span>25</span></li>
@@ -406,14 +1032,14 @@
 								<div class="EjTablePricingSectionHeader">
 									<h3 class="EjPricingTitle">Enterprise</h3>
 									<div class="EjPriceValueWrapper">
-										<span class="EjPriceValue EjPresentPrice"
-											>$<span class="EjBig">33</span>.99/mo</span
-										>
-										<span class="EjPriceValue EjPreviousPrice"
-											>$<span class="EjBig">99</span>.99/mo</span
-										>
+										<span class="EjPriceValue EjPresentPrice">$<span
+												class="EjBig">33</span>.99/mo</span>
+										<span class="EjPriceValue EjPreviousPrice">$<span
+												class="EjBig">99</span>.99/mo</span>
 									</div>
-									<p class="EjPriceDescription"><span>Billed Annually $407.90</span> <br /> <span>(Saves 59%)</span></p>
+									<p class="EjPriceDescription"><span>Billed Annually $407.90</span> <br />
+										<span>(Saves 59%)</span>
+									</p>
 								</div>
 								<ul class="EjPricingCardData">
 									<li class="EjPricingTableLabel1"><span>Unlimited</span></li>
@@ -481,9 +1107,7 @@
 								<div class="EjTablePricingSectionHeader">
 									<h3 class="EjPricingTitle">Free</h3>
 									<div class="EjPriceValueWrapper">
-										<span class="EjPriceValue EjPresentPrice"
-											>$<span class="EjBig">0</span></span
-										>
+										<span class="EjPriceValue EjPresentPrice">$<span class="EjBig">0</span></span>
 									</div>
 								</div>
 								<ul class="EjPricingCardData">
@@ -565,12 +1189,10 @@
 								<div class="EjTablePricingSectionHeader">
 									<h3 class="EjPricingTitle">Business</h3>
 									<div class="EjPriceValueWrapper">
-										<span class="EjPriceValue EjPresentPrice"
-											>$<span class="EjBig">499</span>.99</span
-										>
-										<span class="EjPriceValue EjPreviousPrice"
-											>$<span class="EjBig">999</span>.99</span
-										>
+										<span class="EjPriceValue EjPresentPrice">$<span
+												class="EjBig">499</span>.99</span>
+										<span class="EjPriceValue EjPreviousPrice">$<span
+												class="EjBig">999</span>.99</span>
 									</div>
 									<p class="EjPriceDescription">Saves 50% Lifetime</p>
 								</div>
@@ -616,12 +1238,10 @@
 								<div class="EjTablePricingSectionHeader">
 									<h3 class="EjPricingTitle">Enterprise</h3>
 									<div class="EjPriceValueWrapper">
-										<span class="EjPriceValue EjPresentPrice"
-											>$<span class="EjBig">999</span>.99</span
-										>
-										<span class="EjPriceValue EjPreviousPrice"
-											>$<span class="EjBig">1999</span>.99</span
-										>
+										<span class="EjPriceValue EjPresentPrice">$<span
+												class="EjBig">999</span>.99</span>
+										<span class="EjPriceValue EjPreviousPrice">$<span
+												class="EjBig">1999</span>.99</span>
 									</div>
 									<p class="EjPriceDescription">Saves 50% Lifetime</p>
 								</div>
@@ -692,4 +1312,5 @@
 			});
 		</script>
 	</body>
+
 </html>
