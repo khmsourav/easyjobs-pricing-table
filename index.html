@@ -7,6 +7,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
 		<style>
+			body {
+				background-color: #22142E;
+			}
+
 			.container {
 				margin: 100px auto;
 				max-width: 1260px;
@@ -79,7 +83,7 @@
 				box-shadow: none;
 				border-radius: 5px;
 				background: transparent;
-				color: #597dfc;
+				color: #ffffff;
 				font-size: 16px;
 				font-weight: 500;
 				-webkit-transition: none;
@@ -88,7 +92,7 @@
 			}
 
 			.EjTabButtonGroup .TabLinks.active {
-				background: #597dfc;
+				background: #432D52;
 				color: #fff
 			}
 
@@ -103,7 +107,7 @@
 				bottom: 17px;
 				right: -2px;
 				width: 2px;
-				background: #597dfc
+				background: #432D52
 			}
 
 			.EjTabContent {
@@ -141,7 +145,7 @@
 					padding: 10px;
 					padding-top: 0;
 					border-radius: 10px;
-					background: #597dfc
+					background: #432D52
 				}
 			}
 
@@ -164,7 +168,7 @@
 				-webkit-box-pack: center;
 				-ms-flex-pack: center;
 				justify-content: center;
-				background: #597dfc;
+				background: #432D52;
 				color: #fff;
 				min-height: 150px
 			}
@@ -187,7 +191,7 @@
 				-webkit-box-align: center;
 				-ms-flex-align: center;
 				align-items: center;
-				background: #597dfc;
+				background: #432D52;
 				color: #fff;
 				-webkit-box-pack: center;
 				-ms-flex-pack: center;
@@ -226,7 +230,7 @@
 
 			.EjPricingTable .EjPriceValueWrapper .EjPriceValue {
 				color: #fff;
-				font-size: 14px;
+				font-size: 13px;
 				font-weight: 500;
 				padding-left: 4px;
 				padding-right: 4px;
@@ -268,7 +272,7 @@
 				background: #fff;
 				padding: 5px 7px;
 				border-radius: 20px;
-				color: #597dfc;
+				color: #432D52;
 				margin-right: 5px;
 				font-size: 11px;
 				line-height: 1;
@@ -371,7 +375,7 @@
 			}
 
 			.EjPricingTable .EjPricingCardFooter a:not(.EjButton):hover {
-				color: #597dfc
+				color: #432D52
 			}
 
 			.EjPricingTable .EjPricingCardFooter a:not(.EjButton):not(:last-child) {
@@ -395,13 +399,12 @@
 				-ms-flex-pack: center;
 				justify-content: center;
 				width: initial;
-				padding: 2px 30px;
-				border: 2px solid #597dfc;
+				padding: 2px 20px;
 				border-radius: 50px;
 				min-height: 50px;
 				cursor: pointer;
 				outline: none;
-				background: #597dfc;
+				background: linear-gradient(90deg, #63457B 0.23%, #8A58AC 45.71%, #63457B 98.33%);
 				text-decoration: none;
 				color: #fff;
 				-webkit-box-shadow: 0 10px 20px rgba(89, 125, 252, 0.3);
@@ -415,6 +418,7 @@
 			}
 
 			.EjPricingTable .EjButton .EjText {
+				margin-left: 3px;
 				font-size: 16px;
 				display: -webkit-box;
 				display: -ms-flexbox;
@@ -425,9 +429,8 @@
 			}
 
 			.EjPricingTable .EjButton:hover {
-				border-color: #597dfc;
-				background-color: transparent;
-				color: #1c2238;
+				background: linear-gradient(90deg, #FB8122 0.23%, #FF9747 98.33%);
+				color: #fff;
 				-webkit-box-shadow: none;
 				box-shadow: none
 			}
@@ -513,7 +516,7 @@
 			}
 
 			.EjPricingTable .EjPricingTableTitleCard .EjPricingCardData {
-				background: #597dfc;
+				background: #432D52;
 				color: #fff;
 				margin-left: 20px
 			}
@@ -607,7 +610,7 @@
 
 			.EjPricingTable .EjPricingTableCardWrapper .EjPricingTableCard.Active .EjPricingCardFooter,
 			.EjPricingTable .EjPricingTableCardWrapper .EjPricingTableCard.Active .EjPricingCardData {
-				background: #eef2fe
+				background: #ffeeee
 			}
 
 			.EjPricingTable .EjPricingTableCardWrapper .EjPricingTableCard.Active .EjButton {
@@ -621,12 +624,11 @@
 				-ms-flex-pack: center;
 				justify-content: center;
 				width: initial;
-				padding: 2px 30px;
-				border: 2px solid #597dfc;
-				color: #1c2238;
+				padding: 2px 20px;
+				color: #ffffff;
 				border-radius: 50px;
 				min-height: 50px;
-				background: transparent;
+				background: linear-gradient(90deg, #FB8122 0.23%, #FF9747 98.33%);
 				cursor: pointer;
 				outline: none;
 				-webkit-box-shadow: none;
@@ -634,6 +636,7 @@
 			}
 
 			.EjPricingTable .EjPricingTableCardWrapper .EjPricingTableCard.Active .EjButton .EjText {
+				margin-left: 3px;
 				font-size: 16px;
 				display: -webkit-box;
 				display: -ms-flexbox;
@@ -641,14 +644,6 @@
 				-webkit-box-align: center;
 				-ms-flex-align: center;
 				align-items: center
-			}
-
-			.EjPricingTable .EjPricingTableCardWrapper .EjPricingTableCard.Active .EjButton:hover {
-				border-color: #597dfc;
-				background-color: #597dfc;
-				color: #fff;
-				-webkit-box-shadow: 0 10px 20px rgba(89, 125, 252, 0.3);
-				box-shadow: 0 10px 20px rgba(89, 125, 252, 0.3)
 			}
 		</style>
 	</head>
@@ -681,6 +676,7 @@
 								<li id="EjPricingTableLabel3"><span>On-Boarding Process</span></li>
 								<li id="EjPricingTableLabel4"><span>Visual Pipeline</span></li>
 								<li id="EjPricingTableLabel5"><span>Engaging Quiz</span></li>
+								<li id="EjPricingTableLabel50"><span>Search Engine Indexing</span></li>
 								<li id="EjPricingTableLabel6"><span>Remote Interview</span></li>
 								<li id="EjPricingTableLabel7"><span>easy.jobs AI</span></li>
 								<li id="EjPricingTableLabel8"><span>Smart Workflow</span></li>
@@ -710,6 +706,9 @@
 									<li class="EjPricingTableLabel5">
 										<span class="EjCheckbox Checked"></span>
 									</li>
+									<li class="EjPricingTableLabel50">
+										<span class="EjCheckbox Checked"></span>
+									</li>
 									<li class="EjPricingTableLabel6"><span class="EjCheckbox"></span></li>
 									<li class="EjPricingTableLabel7"><span class="EjCheckbox"></span></li>
 									<li class="EjPricingTableLabel8"><span class="EjCheckbox"></span></li>
@@ -718,9 +717,12 @@
 									<li class="EjPricingTableLabel11"><span class="EjCheckbox"></span></li>
 								</ul>
 								<div class="EjPricingCardFooter">
-									<a href="#">See More</a>
-									<a href="https://app.easy.jobs/subscribe?plan=free" class="EjButton">
-										<span class="EjText">Get Started</span>
+									<a href="https://easy.jobs/pricing">See More</a>
+									<a href="https://app.easy.jobs/subscribe?plan=free" class="EjButton"><img
+											src="https://easy.jobs/wp-content/uploads/2023/10/candy.png" />
+										<span class="EjText">
+
+											Get Started</span>
 									</a>
 								</div>
 							</div>
@@ -729,14 +731,14 @@
 									<h3 class="EjPricingTitle">Startup</h3>
 									<div class="EjPriceValueWrapper">
 										<span class="EjPriceValue EjPresentPrice">$<span
-												class="EjBig">9</span>.99/mo</span>
-										<span class="EjPriceValue EjPreviousPrice">$<span
 												class="EjBig">19</span>.99/mo</span>
+										<span class="EjPriceValue EjPreviousPrice">$<span
+												class="EjBig">49</span>.99/mo</span>
 									</div>
-									<p class="EjPriceDescription">Saves 50% monthly</p>
+									<p class="EjPriceDescription">Saves 60% monthly</p>
 								</div>
 								<ul class="EjPricingCardData">
-									<li class="EjPricingTableLabel1"><span>5</span></li>
+									<li class="EjPricingTableLabel1"><span>10</span></li>
 									<li class="EjPricingTableLabel2"><span>3</span></li>
 									<li class="EjPricingTableLabel3">
 										<span class="EjCheckbox Checked"></span>
@@ -745,6 +747,9 @@
 										<span class="EjCheckbox Checked"></span>
 									</li>
 									<li class="EjPricingTableLabel5">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel50">
 										<span class="EjCheckbox Checked"></span>
 									</li>
 									<li class="EjPricingTableLabel6">
@@ -765,22 +770,25 @@
 									<li class="EjPricingTableLabel11"><span class="EjCheckbox"></span></li>
 								</ul>
 								<div class="EjPricingCardFooter">
-									<a href="#">See More</a>
-									<a href="https://app.easy.jobs/subscribe?plan=startup" class="EjButton">
-										<span class="EjText">Get Started</span>
+									<a href="https://easy.jobs/pricing">See More</a>
+									<a href="https://app.easy.jobs/subscribe?plan=startup-new" class="EjButton"><img
+											src="https://easy.jobs/wp-content/uploads/2023/10/candy.png" />
+										<span class="EjText">
+
+											Get Started</span>
 									</a>
 								</div>
 							</div>
 							<div class="EjPricingTableCard Active">
 								<div class="EjTablePricingSectionHeader">
-									<h3 class="EjPricingTitle">Business</h3>
+									<h3 class="EjPricingTitle">Growth</h3>
 									<div class="EjPriceValueWrapper">
 										<span class="EjPriceValue EjPresentPrice">$<span
-												class="EjBig">24</span>.99/mo</span>
+												class="EjBig">39</span>.99/mo</span>
 										<span class="EjPriceValue EjPreviousPrice">$<span
-												class="EjBig">49</span>.99/mo</span>
+												class="EjBig">99</span>.99/mo</span>
 									</div>
-									<p class="EjPriceDescription">Saves 50% monthly</p>
+									<p class="EjPriceDescription">Saves 60% monthly</p>
 								</div>
 								<ul class="EjPricingCardData">
 									<li class="EjPricingTableLabel1"><span>25</span></li>
@@ -794,6 +802,9 @@
 									<li class="EjPricingTableLabel5">
 										<span class="EjCheckbox Checked"></span>
 									</li>
+									<li class="EjPricingTableLabel50">
+										<span class="EjCheckbox Checked"></span>
+									</li>
 									<li class="EjPricingTableLabel6">
 										<span class="EjCheckbox Checked"></span>
 									</li>
@@ -814,26 +825,29 @@
 									</li>
 								</ul>
 								<div class="EjPricingCardFooter">
-									<a href="#">See More</a>
-									<a href="https://app.easy.jobs/subscribe?plan=business" class="EjButton">
-										<span class="EjText">Get Started</span>
+									<a href="https://easy.jobs/pricing">See More</a>
+									<a href="https://app.easy.jobs/subscribe?plan=growth-halloween"
+										class="EjButton"><img
+											src="https://easy.jobs/wp-content/uploads/2023/10/candy.png" />
+										<span class="EjText">
+											Get Started</span>
 									</a>
 								</div>
 							</div>
 							<div class="EjPricingTableCard">
 								<div class="EjTablePricingSectionHeader">
-									<h3 class="EjPricingTitle">Enterprise</h3>
+									<h3 class="EjPricingTitle">Scale</h3>
 									<div class="EjPriceValueWrapper">
 										<span class="EjPriceValue EjPresentPrice">$<span
-												class="EjBig">49</span>.99/mo</span>
+												class="EjBig">249</span>.99/mo</span>
 										<span class="EjPriceValue EjPreviousPrice">$<span
-												class="EjBig">99</span>.99/mo</span>
+												class="EjBig">499</span>.99/mo</span>
 									</div>
 									<p class="EjPriceDescription">Saves 50% monthly</p>
 								</div>
 								<ul class="EjPricingCardData">
-									<li class="EjPricingTableLabel1"><span>Unlimited</span></li>
-									<li class="EjPricingTableLabel2"><span>100</span></li>
+									<li class="EjPricingTableLabel1"><span>100</span></li>
+									<li class="EjPricingTableLabel2"><span>25</span></li>
 									<li class="EjPricingTableLabel3">
 										<span class="EjCheckbox Checked"></span>
 									</li>
@@ -843,6 +857,9 @@
 									<li class="EjPricingTableLabel5">
 										<span class="EjCheckbox Checked"></span>
 									</li>
+									<li class="EjPricingTableLabel50">
+										<span class="EjCheckbox Checked"></span>
+									</li>
 									<li class="EjPricingTableLabel6">
 										<span class="EjCheckbox Checked"></span>
 									</li>
@@ -863,9 +880,11 @@
 									</li>
 								</ul>
 								<div class="EjPricingCardFooter">
-									<a href="#">See More</a>
-									<a href="https://app.easy.jobs/subscribe?plan=enterprise" class="EjButton">
-										<span class="EjText">Get Started</span>
+									<a href="https://easy.jobs/pricing">See More</a>
+									<a href="https://app.easy.jobs/subscribe?plan=scale-halloween" class="EjButton"><img
+											src="https://easy.jobs/wp-content/uploads/2023/10/candy.png" />
+										<span class="EjText">
+											Get Started</span>
 									</a>
 								</div>
 							</div>
@@ -884,6 +903,7 @@
 								<li id="EjPricingTableLabel3"><span>On-Boarding Process</span></li>
 								<li id="EjPricingTableLabel4"><span>Visual Pipeline</span></li>
 								<li id="EjPricingTableLabel5"><span>Engaging Quiz</span></li>
+								<li id="EjPricingTableLabel50"><span>Search Engine Indexing</span></li>
 								<li id="EjPricingTableLabel6"><span>Remote Interview</span></li>
 								<li id="EjPricingTableLabel7"><span>easy.jobs AI</span></li>
 								<li id="EjPricingTableLabel8"><span>Smart Workflow</span></li>
@@ -913,6 +933,9 @@
 									<li class="EjPricingTableLabel5">
 										<span class="EjCheckbox Checked"></span>
 									</li>
+									<li class="EjPricingTableLabel50">
+										<span class="EjCheckbox Checked"></span>
+									</li>
 									<li class="EjPricingTableLabel6"><span class="EjCheckbox"></span></li>
 									<li class="EjPricingTableLabel7"><span class="EjCheckbox"></span></li>
 									<li class="EjPricingTableLabel8"><span class="EjCheckbox"></span></li>
@@ -921,9 +944,11 @@
 									<li class="EjPricingTableLabel11"><span class="EjCheckbox"></span></li>
 								</ul>
 								<div class="EjPricingCardFooter">
-									<a href="#">See More</a>
-									<a href="https://app.easy.jobs/subscribe?plan=free" class="EjButton">
-										<span class="EjText">Get Started</span>
+									<a href="https://easy.jobs/pricing">See More</a>
+									<a href="https://app.easy.jobs/subscribe?plan=free" class="EjButton"><img
+											src="https://easy.jobs/wp-content/uploads/2023/10/candy.png" />
+										<span class="EjText">
+											Get Started</span>
 									</a>
 								</div>
 							</div>
@@ -932,16 +957,16 @@
 									<h3 class="EjPricingTitle">Startup</h3>
 									<div class="EjPriceValueWrapper">
 										<span class="EjPriceValue EjPresentPrice">$<span
-												class="EjBig">5</span>.99/mo</span>
+												class="EjBig">13</span>.33/mo</span>
 										<span class="EjPriceValue EjPreviousPrice">$<span
-												class="EjBig">19</span>.99/mo</span>
+												class="EjBig">33</span>.33/mo</span>
 									</div>
-									<p class="EjPriceDescription"><span>Billed Annually $71.88</span> <br />
-										<span>(Saves 64%)</span>
+									<p class="EjPriceDescription"><span>Billed Annually $159.98</span> <br />
+										<span>(Saves 60%)</span>
 									</p>
 								</div>
 								<ul class="EjPricingCardData">
-									<li class="EjPricingTableLabel1"><span>5</span></li>
+									<li class="EjPricingTableLabel1"><span>10</span></li>
 									<li class="EjPricingTableLabel2"><span>3</span></li>
 									<li class="EjPricingTableLabel3">
 										<span class="EjCheckbox Checked"></span>
@@ -950,6 +975,9 @@
 										<span class="EjCheckbox Checked"></span>
 									</li>
 									<li class="EjPricingTableLabel5">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel50">
 										<span class="EjCheckbox Checked"></span>
 									</li>
 									<li class="EjPricingTableLabel6">
@@ -970,23 +998,26 @@
 									<li class="EjPricingTableLabel11"><span class="EjCheckbox"></span></li>
 								</ul>
 								<div class="EjPricingCardFooter">
-									<a href="#">See More</a>
-									<a href="https://app.easy.jobs/subscribe?plan=startup-yearly" class="EjButton">
-										<span class="EjText">Get Started</span>
+									<a href="https://easy.jobs/pricing">See More</a>
+									<a href="https://app.easy.jobs/subscribe?plan=startup-yearly-halloween"
+										class="EjButton"><img
+											src="https://easy.jobs/wp-content/uploads/2023/10/candy.png" />
+										<span class="EjText">
+											Get Started</span>
 									</a>
 								</div>
 							</div>
 							<div class="EjPricingTableCard Active">
 								<div class="EjTablePricingSectionHeader">
-									<h3 class="EjPricingTitle">Business</h3>
+									<h3 class="EjPricingTitle">Growth</h3>
 									<div class="EjPriceValueWrapper">
 										<span class="EjPriceValue EjPresentPrice">$<span
-												class="EjBig">19</span>.99/mo</span>
+												class="EjBig">33</span>.33/mo</span>
 										<span class="EjPriceValue EjPreviousPrice">$<span
-												class="EjBig">49</span>.99/mo</span>
+												class="EjBig">83</span>.33/mo</span>
 									</div>
-									<p class="EjPriceDescription"><span>Billed Annually $239.85</span> <br />
-										<span>(Saves 52%)</span>
+									<p class="EjPriceDescription"><span>Billed Annually $399.98</span> <br />
+										<span>(Saves 60%)</span>
 									</p>
 								</div>
 								<ul class="EjPricingCardData">
@@ -1001,6 +1032,9 @@
 									<li class="EjPricingTableLabel5">
 										<span class="EjCheckbox Checked"></span>
 									</li>
+									<li class="EjPricingTableLabel50">
+										<span class="EjCheckbox Checked"></span>
+									</li>
 									<li class="EjPricingTableLabel6">
 										<span class="EjCheckbox Checked"></span>
 									</li>
@@ -1021,28 +1055,31 @@
 									</li>
 								</ul>
 								<div class="EjPricingCardFooter">
-									<a href="#">See More</a>
-									<a href="https://app.easy.jobs/subscribe?plan=business-yearly" class="EjButton">
-										<span class="EjText">Get Started</span>
+									<a href="https://easy.jobs/pricing">See More</a>
+									<a href="https://app.easy.jobs/subscribe?plan=growth-yearly-halloween"
+										class="EjButton"><img
+											src="https://easy.jobs/wp-content/uploads/2023/10/candy.png" />
+										<span class="EjText">
+											Get Started</span>
 									</a>
 								</div>
 							</div>
 							<div class="EjPricingTableCard">
 								<div class="EjTablePricingSectionHeader">
-									<h3 class="EjPricingTitle">Enterprise</h3>
+									<h3 class="EjPricingTitle">Scale</h3>
 									<div class="EjPriceValueWrapper">
 										<span class="EjPriceValue EjPresentPrice">$<span
-												class="EjBig">33</span>.99/mo</span>
+												class="EjBig">125</span>.00/mo</span>
 										<span class="EjPriceValue EjPreviousPrice">$<span
-												class="EjBig">99</span>.99/mo</span>
+												class="EjBig">249</span>.99/mo</span>
 									</div>
-									<p class="EjPriceDescription"><span>Billed Annually $407.90</span> <br />
-										<span>(Saves 59%)</span>
+									<p class="EjPriceDescription"><span>Billed Annually $1499.94</span> <br />
+										<span>(Saves 50%)</span>
 									</p>
 								</div>
 								<ul class="EjPricingCardData">
-									<li class="EjPricingTableLabel1"><span>Unlimited</span></li>
-									<li class="EjPricingTableLabel2"><span>100</span></li>
+									<li class="EjPricingTableLabel1"><span>100</span></li>
+									<li class="EjPricingTableLabel2"><span>25</span></li>
 									<li class="EjPricingTableLabel3">
 										<span class="EjCheckbox Checked"></span>
 									</li>
@@ -1052,6 +1089,9 @@
 									<li class="EjPricingTableLabel5">
 										<span class="EjCheckbox Checked"></span>
 									</li>
+									<li class="EjPricingTableLabel50">
+										<span class="EjCheckbox Checked"></span>
+									</li>
 									<li class="EjPricingTableLabel6">
 										<span class="EjCheckbox Checked"></span>
 									</li>
@@ -1072,9 +1112,12 @@
 									</li>
 								</ul>
 								<div class="EjPricingCardFooter">
-									<a href="#">See More</a>
-									<a href="https://app.easy.jobs/subscribe?plan=enterprise-yearly" class="EjButton">
-										<span class="EjText">Get Started</span>
+									<a href="https://easy.jobs/pricing">See More</a>
+									<a href="https://app.easy.jobs/subscribe?plan=scale-yearly-halloween"
+										class="EjButton"><img
+											src="https://easy.jobs/wp-content/uploads/2023/10/candy.png" />
+										<span class="EjText">
+											Get Started</span>
 									</a>
 								</div>
 							</div>
@@ -1093,6 +1136,7 @@
 								<li id="EjPricingTableLabel3"><span>On-Boarding Process</span></li>
 								<li id="EjPricingTableLabel4"><span>Visual Pipeline</span></li>
 								<li id="EjPricingTableLabel5"><span>Engaging Quiz</span></li>
+								<li id="EjPricingTableLabel50"><span>Search Engine Indexing</span></li>
 								<li id="EjPricingTableLabel6"><span>Remote Interview</span></li>
 								<li id="EjPricingTableLabel7"><span>easy.jobs AI</span></li>
 								<li id="EjPricingTableLabel8"><span>Smart Workflow</span></li>
@@ -1121,6 +1165,9 @@
 									<li class="EjPricingTableLabel5">
 										<span class="EjCheckbox Checked"></span>
 									</li>
+									<li class="EjPricingTableLabel50">
+										<span class="EjCheckbox Checked"></span>
+									</li>
 									<li class="EjPricingTableLabel6"><span class="EjCheckbox"></span></li>
 									<li class="EjPricingTableLabel7"><span class="EjCheckbox"></span></li>
 									<li class="EjPricingTableLabel8"><span class="EjCheckbox"></span></li>
@@ -1129,9 +1176,11 @@
 									<li class="EjPricingTableLabel11"><span class="EjCheckbox"></span></li>
 								</ul>
 								<div class="EjPricingCardFooter">
-									<a href="#">See More</a>
-									<a href="https://app.easy.jobs/subscribe?plan=free" class="EjButton">
-										<span class="EjText">Get Started</span>
+									<a href="https://easy.jobs/pricing">See More</a>
+									<a href="https://app.easy.jobs/subscribe?plan=free" class="EjButton"><img
+											src="https://easy.jobs/wp-content/uploads/2023/10/candy.png" />
+										<span class="EjText">
+											Get Started</span>
 									</a>
 								</div>
 							</div>
@@ -1140,14 +1189,14 @@
 									<h3 class="EjPricingTitle">Startup</h3>
 									<div class="EjPriceValueWrapper">
 										<span class="EjPriceValue EjPresentPrice">$<span
-												class="EjBig">199</span>.99</span>
+												class="EjBig">299</span>.70</span>
 										<span class="EjPriceValue EjPreviousPrice">$<span
-												class="EjBig">499</span>.99</span>
+												class="EjBig">999</span>.99</span>
 									</div>
-									<p class="EjPriceDescription">Saves 60% Lifetime</p>
+									<p class="EjPriceDescription">Saves 70% Lifetime</p>
 								</div>
 								<ul class="EjPricingCardData">
-									<li class="EjPricingTableLabel1"><span>5</span></li>
+									<li class="EjPricingTableLabel1"><span>10</span></li>
 									<li class="EjPricingTableLabel2"><span>3</span></li>
 									<li class="EjPricingTableLabel3">
 										<span class="EjCheckbox Checked"></span>
@@ -1156,6 +1205,9 @@
 										<span class="EjCheckbox Checked"></span>
 									</li>
 									<li class="EjPricingTableLabel5">
+										<span class="EjCheckbox Checked"></span>
+									</li>
+									<li class="EjPricingTableLabel50">
 										<span class="EjCheckbox Checked"></span>
 									</li>
 									<li class="EjPricingTableLabel6">
@@ -1176,22 +1228,25 @@
 									<li class="EjPricingTableLabel11"><span class="EjCheckbox"></span></li>
 								</ul>
 								<div class="EjPricingCardFooter">
-									<a href="#">See More</a>
-									<a href="https://app.easy.jobs/subscribe?plan=startup-lifetime" class="EjButton">
-										<span class="EjText">Get Started</span>
+									<a href="https://easy.jobs/pricing">See More</a>
+									<a href="https://app.easy.jobs/subscribe?plan=startup-lifetime-halloween"
+										class="EjButton"><img
+											src="https://easy.jobs/wp-content/uploads/2023/10/candy.png" />
+										<span class="EjText">
+											Get Started</span>
 									</a>
 								</div>
 							</div>
 							<div class="EjPricingTableCard Active">
 								<div class="EjTablePricingSectionHeader">
-									<h3 class="EjPricingTitle">Business</h3>
+									<h3 class="EjPricingTitle">Growth</h3>
 									<div class="EjPriceValueWrapper">
 										<span class="EjPriceValue EjPresentPrice">$<span
-												class="EjBig">499</span>.99</span>
+												class="EjBig">599</span>.00</span>
 										<span class="EjPriceValue EjPreviousPrice">$<span
-												class="EjBig">999</span>.99</span>
+												class="EjBig">1999</span>.99</span>
 									</div>
-									<p class="EjPriceDescription">Saves 50% Lifetime</p>
+									<p class="EjPriceDescription">Saves 70% Lifetime</p>
 								</div>
 								<ul class="EjPricingCardData">
 									<li class="EjPricingTableLabel1"><span>25</span></li>
@@ -1205,6 +1260,9 @@
 									<li class="EjPricingTableLabel5">
 										<span class="EjCheckbox Checked"></span>
 									</li>
+									<li class="EjPricingTableLabel50">
+										<span class="EjCheckbox Checked"></span>
+									</li>
 									<li class="EjPricingTableLabel6">
 										<span class="EjCheckbox Checked"></span>
 									</li>
@@ -1225,26 +1283,29 @@
 									</li>
 								</ul>
 								<div class="EjPricingCardFooter">
-									<a href="#">See More</a>
-									<a href="https://app.easy.jobs/subscribe?plan=business-lifetime" class="EjButton">
-										<span class="EjText">Get Started</span>
+									<a href="https://easy.jobs/pricing">See More</a>
+									<a href="https://app.easy.jobs/subscribe?plan=growth-lifetime-halloween"
+										class="EjButton"><img
+											src="https://easy.jobs/wp-content/uploads/2023/10/candy.png" />
+										<span class="EjText">
+											Get Started</span>
 									</a>
 								</div>
 							</div>
 							<div class="EjPricingTableCard">
 								<div class="EjTablePricingSectionHeader">
-									<h3 class="EjPricingTitle">Enterprise</h3>
+									<h3 class="EjPricingTitle">Scale</h3>
 									<div class="EjPriceValueWrapper">
 										<span class="EjPriceValue EjPresentPrice">$<span
-												class="EjBig">999</span>.99</span>
+												class="EjBig">1799</span>.99</span>
 										<span class="EjPriceValue EjPreviousPrice">$<span
-												class="EjBig">1999</span>.99</span>
+												class="EjBig">5999</span>.99</span>
 									</div>
-									<p class="EjPriceDescription">Saves 50% Lifetime</p>
+									<p class="EjPriceDescription">Saves 70% Lifetime</p>
 								</div>
 								<ul class="EjPricingCardData">
-									<li class="EjPricingTableLabel1"><span>Unlimited</span></li>
-									<li class="EjPricingTableLabel2"><span>100</span></li>
+									<li class="EjPricingTableLabel1"><span>100</span></li>
+									<li class="EjPricingTableLabel2"><span>25</span></li>
 									<li class="EjPricingTableLabel3">
 										<span class="EjCheckbox Checked"></span>
 									</li>
@@ -1254,6 +1315,9 @@
 									<li class="EjPricingTableLabel5">
 										<span class="EjCheckbox Checked"></span>
 									</li>
+									<li class="EjPricingTableLabel50">
+										<span class="EjCheckbox Checked"></span>
+									</li>
 									<li class="EjPricingTableLabel6">
 										<span class="EjCheckbox Checked"></span>
 									</li>
@@ -1274,9 +1338,12 @@
 									</li>
 								</ul>
 								<div class="EjPricingCardFooter">
-									<a href="#">See More</a>
-									<a href="https://app.easy.jobs/subscribe?plan=enterprise-lifetime" class="EjButton">
-										<span class="EjText">Get Started</span>
+									<a href="https://easy.jobs/pricing">See More</a>
+									<a href="https://app.easy.jobs/subscribe?plan=scale-lifetime-halloween"
+										class="EjButton"><img
+											src="https://easy.jobs/wp-content/uploads/2023/10/candy.png" />
+										<span class="EjText">
+											Get Started</span>
 									</a>
 								</div>
 							</div>
