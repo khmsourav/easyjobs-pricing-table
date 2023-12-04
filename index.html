@@ -21,6 +21,7 @@
 		}
 	</style>
 
+
 	<style>
 		@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
@@ -83,7 +84,7 @@
 			box-shadow: none;
 			border-radius: 5px;
 			background: transparent;
-			color: #916CFF;
+			color: #597dfc;
 			font-size: 16px;
 			font-weight: 500;
 			-webkit-transition: none;
@@ -92,7 +93,7 @@
 		}
 
 		.EjTabButtonGroup .TabLinks.active {
-			background: #916CFF;
+			background: #597dfc;
 			color: #fff
 		}
 
@@ -107,7 +108,7 @@
 			bottom: 17px;
 			right: -2px;
 			width: 2px;
-			background: #916CFF
+			background: #597dfc
 		}
 
 		.EjTabContent {
@@ -145,7 +146,7 @@
 				padding: 10px;
 				padding-top: 0;
 				border-radius: 10px;
-				background: #916CFF
+				background: #597dfc
 			}
 		}
 
@@ -168,7 +169,7 @@
 			-webkit-box-pack: center;
 			-ms-flex-pack: center;
 			justify-content: center;
-			background: #916CFF;
+			background: #597dfc;
 			color: #fff;
 			min-height: 150px
 		}
@@ -191,7 +192,7 @@
 			-webkit-box-align: center;
 			-ms-flex-align: center;
 			align-items: center;
-			background: #916CFF;
+			background: #597dfc;
 			color: #fff;
 			-webkit-box-pack: center;
 			-ms-flex-pack: center;
@@ -230,7 +231,7 @@
 
 		.EjPricingTable .EjPriceValueWrapper .EjPriceValue {
 			color: #fff;
-			font-size: 13px;
+			font-size: 14px;
 			font-weight: 500;
 			padding-left: 4px;
 			padding-right: 4px;
@@ -272,7 +273,7 @@
 			background: #fff;
 			padding: 5px 7px;
 			border-radius: 20px;
-			color: #916CFF;
+			color: #597dfc;
 			margin-right: 5px;
 			font-size: 11px;
 			line-height: 1;
@@ -375,7 +376,7 @@
 		}
 
 		.EjPricingTable .EjPricingCardFooter a:not(.EjButton):hover {
-			color: #916CFF
+			color: #597dfc
 		}
 
 		.EjPricingTable .EjPricingCardFooter a:not(.EjButton):not(:last-child) {
@@ -399,16 +400,17 @@
 			-ms-flex-pack: center;
 			justify-content: center;
 			width: initial;
-			padding: 2px 26px;
+			padding: 2px 30px;
+			border: 2px solid #597dfc;
 			border-radius: 50px;
 			min-height: 50px;
 			cursor: pointer;
 			outline: none;
-			border: 1px solid #FFBBBC;
-			background: linear-gradient(90deg, #FF9DA0 0.12%, #916CFF 99.87%);
-			box-shadow: 0px 8px 24.8px 0px rgba(190, 110, 253, 0.20);
+			background: #597dfc;
 			text-decoration: none;
 			color: #fff;
+			-webkit-box-shadow: 0 10px 20px rgba(89, 125, 252, 0.3);
+			box-shadow: 0 10px 20px rgba(89, 125, 252, 0.3);
 			-webkit-transition: all 0.3s ease-in-out;
 			transition: all 0.3s ease-in-out;
 			-webkit-transition-property: color, background, border-color, -webkit-box-shadow;
@@ -418,7 +420,6 @@
 		}
 
 		.EjPricingTable .EjButton .EjText {
-			margin-left: 3px;
 			font-size: 16px;
 			display: -webkit-box;
 			display: -ms-flexbox;
@@ -429,7 +430,11 @@
 		}
 
 		.EjPricingTable .EjButton:hover {
-			background: linear-gradient(90deg, #916CFF 0.12%, #FF9DA0 99.87%);
+			border-color: #597dfc;
+			background-color: transparent;
+			color: #1c2238;
+			-webkit-box-shadow: none;
+			box-shadow: none
 		}
 
 		.EjPricingTable .EjCheckbox {
@@ -513,7 +518,7 @@
 		}
 
 		.EjPricingTable .EjPricingTableTitleCard .EjPricingCardData {
-			background: #916CFF;
+			background: #597dfc;
 			color: #fff;
 			margin-left: 20px
 		}
@@ -607,7 +612,7 @@
 
 		.EjPricingTable .EjPricingTableCardWrapper .EjPricingTableCard.Active .EjPricingCardFooter,
 		.EjPricingTable .EjPricingTableCardWrapper .EjPricingTableCard.Active .EjPricingCardData {
-			background: #ffeeee
+			background: #eef2fe
 		}
 
 		.EjPricingTable .EjPricingTableCardWrapper .EjPricingTableCard.Active .EjButton {
@@ -621,13 +626,12 @@
 			-ms-flex-pack: center;
 			justify-content: center;
 			width: initial;
-			padding: 2px 20px;
-			color: #ffffff;
+			padding: 2px 30px;
+			border: 2px solid #597dfc;
+			color: #1c2238;
 			border-radius: 50px;
 			min-height: 50px;
-			border: 1px solid #FFBBBC;
-			background: linear-gradient(90deg, #916CFF 0.12%, #FF9DA0 99.87%);
-			box-shadow: 0px 8px 24.8px 0px rgba(190, 110, 253, 0.20);
+			background: transparent;
 			cursor: pointer;
 			outline: none;
 			-webkit-box-shadow: none;
@@ -635,7 +639,6 @@
 		}
 
 		.EjPricingTable .EjPricingTableCardWrapper .EjPricingTableCard.Active .EjButton .EjText {
-			margin-left: 3px;
 			font-size: 16px;
 			display: -webkit-box;
 			display: -ms-flexbox;
@@ -643,6 +646,14 @@
 			-webkit-box-align: center;
 			-ms-flex-align: center;
 			align-items: center
+		}
+
+		.EjPricingTable .EjPricingTableCardWrapper .EjPricingTableCard.Active .EjButton:hover {
+			border-color: #597dfc;
+			background-color: #597dfc;
+			color: #fff;
+			-webkit-box-shadow: 0 10px 20px rgba(89, 125, 252, 0.3);
+			box-shadow: 0 10px 20px rgba(89, 125, 252, 0.3)
 		}
 	</style>
 </head>
